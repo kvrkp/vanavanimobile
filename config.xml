@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.vanavani" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Vanavani</name>
+    <description>
+        Vanavani Vidyalaya Matriculation School
+    </description>
+    <author email="umamags@gmail.com" href="http://www.vanavanisalem.org">
+        Mahesh Natarajan
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
