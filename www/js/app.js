@@ -49,18 +49,10 @@ vanavaniApp.config(['$routeProvider',
   .run(function($rootScope, validateCookie) {
     $rootScope.$on('$routeChangeSuccess', function () {
         validateCookie($rootScope);
-    })
+    }) 
   })
-.factory('validateCookie', function($http, User){
+.factory('validateCookie', function($rootScope, $http, User){
     return function(scope) {
-		var url = "php/ReadCookie.php?action=read";
-        $http.get(url).success(function (response) {		
-            User.password = "";
-            User.isLogged = response[0].loggedin;
-            User.username = response[0].username;
-            if (User.isLogged) {
-            	$("#adminMenu").show();
-            }
-        });            								
+    	$rootScope.sitename="http://www.vanavanisalem.org/vanavaninew/";
     }
 });
