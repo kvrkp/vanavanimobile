@@ -1,0 +1,16 @@
+<project name="vanavanimobile" default="zip" basedir=".">
+	<description>
+        Create zip file for uploading to phonegap. Upload is a manual process
+    </description>
+	<!-- set global properties for this build -->
+	<property name="src" location="${basedir}" />
+	<property name="dist" location="${basedir}/dist" />
+
+	<target name="zip" description="create zip file">
+		<zip destfile="${dist}/vanavanimobile.zip" 
+			basedir="${src}" 
+			includes="www/**, hooks/**, config.xml, LICENSE, README.md"
+			excludes="www/images/**" />
+	</target>
+
+</project>
